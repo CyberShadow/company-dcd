@@ -250,6 +250,7 @@ Optionally, pass POS as the --cursorPos argument if non-nil."
   (nth 8 (syntax-ppss)))
 
 ;; Interface functions to company-mode.
+
 (defun company-dcd--get-candidates ()
   "Retrieve ordinary auto-completion candidates."
   (unless (company-dcd--in-string/comment)
@@ -398,7 +399,7 @@ S is candidate string."
     (with-temp-buffer
       (insert s)
 
-      ;;goto beggining of function name
+      ;; Go to beginning of function name
       (progn
         (end-of-line)        (backward-sexp)
 	(backward-sexp)
@@ -633,7 +634,6 @@ Currently, it simply unescapes \n and \\n."
 	      (find-file file))
 	    (goto-char (byte-to-position offset)))
 	(message "Not found")))))
-
 
 ;; Utilities for goto-definition
 
