@@ -303,8 +303,7 @@ Used to display the argument list (calltips)."
       (run-with-idle-timer 0 nil (lambda ()
 				   (company-begin-backend 'company-dcd--calltips-for-struct-constructor)
 				   (let ((this-command 'company-idle-begin))
-				     (company-post-command))))
-      )
+				     (company-post-command)))))
      ((string= "c" candidate-type) ; when it was a class
       (run-with-idle-timer 0 nil (lambda ()
 				   (company-begin-backend 'company-dcd--calltips-for-struct-constructor)
